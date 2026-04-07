@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio - Desenvolvedor</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: #020617;
+}@media (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+p {
+  color: #cbd5f5;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+}
+
+button {
+  background: #38bdf8;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #0ea5e9;
+}
+
+.whatsapp {
+  background: #22c55e;
+}
+
+.whatsapp:hover {
+  background: #16a34a;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>Charles Wagner</h1>
+  <p>Desenvolvedor Full Stack</p>
+  <button class="whatsapp" onclick="contato()">Falar no WhatsApp</button>
+</header>
+
+<section>
+  <h2>Sobre mim</h2>
+  <p>Crio sites modernos, rápidos e focados em trazer mais clientes para negócios.</p>
+</section>
+
+<section>
+  <h2>Projetos</h2>
+
+  <div class="card">
+    <h3>Site de Restaurante</h3>
+    <p>Cardápio online + botão de pedido no WhatsApp</p>
+  </div>
+
+  <div class="card">
+    <h3>Site de Barbearia</h3>
+    <p>Agendamento simples e visual profissional</p>
+  </div>
+
+  <button onclick="mostrarMais()">Ver mais projetos</button>
+
+  <div id="maisProjetos" class="hidden">
+
+    <div class="card">
+      <h3>Loja Online</h3>
+      <p>Catálogo de produtos moderno</p>
+    </div>
+
+    <div class="card">
+      <h3>Sistema de Login</h3>
+      <p>Cadastro e login com banco de dados</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+  <h2>Serviços</h2>
+  <ul>
+    <li>Criação de sites profissionais</li>
+    <li>Integração com WhatsApp</li>
+    <li>Entrega rápida (2 a 3 dias)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Preço inicial</h2>
+  <p>Sites a partir de <strong>R$150</strong></p>
+</section>
+
+<section>
+  <h2>Contato</h2>
+  <button class="whatsapp" onclick="contato()">Falar comigo agora</button>
+</section>
+
+<script>
+function mostrarMais() {
+  document.getElementById("maisProjetos").classList.toggle("hidden");
+}
+
+function contato() {
+  window.open("https://wa.me/5521990455014", "_blank");
+}
+</script>
+
+</body>
+</html>
